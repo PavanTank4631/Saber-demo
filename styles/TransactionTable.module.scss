@@ -1,0 +1,113 @@
+@import 'variables.scss';
+
+.main {
+  margin-top: 50px;
+  font-family: "Satoshi"; 
+
+  .header {
+    display: grid;
+    grid-template-columns: 1fr 3fr 2fr 2fr 3fr 1fr;
+    align-items: center;
+    text-align: center;
+    background-color: $menu-component-bg;
+    padding: 7px 10px;
+    border-radius: 10px 10px 0 0;
+
+    > div {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      > img{
+        height: 5px;
+        margin-left: 5px;
+      }
+    }
+
+    .moreIcon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid $primary-outline;
+      width: max-content;
+      padding: 5px;
+      border-radius: 5px;
+    }
+  }
+
+  .list {
+    background-color: $secondary-bg;
+    padding: 10px;
+
+    .listItem {
+      display: grid;
+      align-items: center;
+      text-align: center;
+      grid-template-columns: 1fr 3fr 2fr 2fr 3fr 1fr;
+      background-color: $component-bg;
+      border-radius: 10px;
+      margin-top: 10px;
+
+      > div {
+        width: 50%;
+        margin: 0 auto;
+        height: max-content;
+        padding: 7px;
+        border-radius: 50px;
+        text-transform: capitalize;
+        font-size: 14px;
+      }
+
+      > img {
+        height: 20px;
+        cursor: pointer;
+      }
+    }
+
+    .listItem[data-is-collapsed="true"]{
+      background-color: $selected-component-bg;
+      border-radius: 10px 10px 0 0;
+    }
+
+    .details{
+      background-color: $selected-component-bg;
+      padding: 10px;
+      margin-bottom: 10px;
+      border-radius: 0 0 10px 10px;
+      .itemDetails{
+        display: grid;
+        align-items: center;
+        text-align: center;
+        grid-template-columns: 4fr 2fr 2fr 3fr 1fr;
+        font-size: 14px;
+        margin-block: 20px;
+      }
+    }
+  }
+
+  .footer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: $menu-component-bg;
+    padding: 15px 20px;
+    border-radius: 0 0 10px 10px;
+
+    > div{
+      display: flex;
+      align-items: center;
+    }
+
+    .paginationButton{
+      border: 1px solid $primary-outline;
+      color: $white;
+      text-transform: capitalize;
+      padding: 5px 20px;
+      border-radius: 10px;
+      font-size: 14px;
+      > svg{
+        font-size: 12px;
+      }
+    }
+  }
+}
